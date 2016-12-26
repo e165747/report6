@@ -46,8 +46,10 @@ public class LivingThing {
 
     public void wounded(int damage) {
         HitPoint -= damage;
-        if (HitPoint < 0) {
+        if(HitPoint <= 0) {
             dead = true;
+        }else{
+            dead = false;
         }
     }
 }
